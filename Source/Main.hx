@@ -111,29 +111,8 @@ class Main extends Sprite {
 	function resize(e:Event):Void {
 		if (!inited) {
 			init();
-		} else {
-			// Update stage dimensions
-			stageWidth = Lib.current.stage.stageWidth;
-			stageHeight = Lib.current.stage.stageHeight;
-
-			// Reposition platforms
-			platform1.x = 5;
-			platform1.y = stageHeight / 2 - platform1.height / 2;
-
-			platform2.x = stageWidth - platform2.width - 5;
-			platform2.y = stageHeight / 2 - platform2.height / 2;
-
-			// Reposition ball
-			ball.x = stageWidth / 2 - ball.width / 2;
-			ball.y = stageHeight / 2 - ball.height / 2;
-
-			// Resize and reposition text fields
-			scoreField.width = stageWidth;
-			scoreField.y = 30;
-
-			messageField.width = stageWidth;
-			messageField.y = stageHeight - 50;
 		}
+		// Stage scale mode handles resizing automatically
 	}
 
 	private function setGameState(state:GameState):Void {
@@ -284,6 +263,8 @@ class Main extends Sprite {
 	public static function main() {
 		// static entry point
 		Lib.current.stage.align = openfl.display.StageAlign.TOP_LEFT;
+		Lib.current.stage.scaleMode = openfl.display.StageScaleMode.NO_BORDER;
+		Lib.current.stage.quality = openfl.display.StageQuality.BEST;
 		Lib.current.addChild(new Main());
 	}
 }
