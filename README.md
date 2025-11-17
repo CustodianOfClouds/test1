@@ -1,40 +1,32 @@
 # Haxe-Pong
 Pong written in Haxe. Haxe pong. Pong.
 
-This repo is still an unpolished to-do. Also it is my first haxe project, so noobish code. I will finish it once I have time and enough motivation.
-
-If anyone is willing to help, they are welcome to open a pull request or an issue 🙏
-
-# To-Do
-With the way I set up code up
-
-    stageWidth = Lib.current.stage.stageWidth;
-	stageHeight = Lib.current.stage.stageHeight;
-    
-and with all class objects relative to one another based on these relative width and heights, there shouldn't be any problems. However, if you compile into html5, and then zoom the window out beyond 70% (ie, <60%), the window breaks and some objects are hidden from view from an invisible border the same color as the stage color. I don't know why this happens, so perhaps figure this out later???
+A simple Pong game built with OpenFL that compiles to both HTML5 and Windows (C++). Features proper window resizing support and crisp text rendering across platforms.
 
 # How to build
-To debug, run
-`openfl test <platform>`
 
-To build, run
-`openfl build <platform> -release -clean`
+## Dependencies
+Install dependencies with:
+```bash
+haxelib install haxelib.json
+```
 
-The `-clean` tag clears cache.
+Then set up OpenFL and Lime (optional, but recommended):
+```bash
+haxelib run lime setup
+haxelib run openfl setup
+```
 
-The two main platforms I use are windows (compiles into a cpp app) and html5 (compiles into a js app).
+## Build commands
+Test/debug:
+```bash
+openfl test <platform>
+```
 
-# Dependencies
-This project uses openfl v9.2.2, but install lime v8.0.2 just in case as well.  
-Run `haxelib install haxelib.json` to install dependencies once you are on the root of dir.
+Release build:
+```bash
+openfl build <platform> -release -clean
+```
 
-# Notes
-If you install the dependencies, you can then run build commands with `haxelib run openfl <build command>`
-
-However, you can also be more efficient by adding the openfl and lime libraries to the path with the following commands
-
-    haxelib run lime setup
-    haxelib run openfl setup
-
-This adds everything to path so you can compile and run the game with just `openfl <build command>`.
+**Supported platforms**: `html5` (JavaScript/web), `windows` (C++ executable)
 
