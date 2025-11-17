@@ -6,15 +6,7 @@ This repo is still an unpolished to-do. Also it is my first haxe project, so noo
 If anyone is willing to help, they are welcome to open a pull request or an issue 🙏
 
 # To-Do
-Figure out how to set icons correctly.  
-According to https://community.openfl.org/t/how-to-add-icon-to-compiled-project/13743/3 all you're supposed to do is to add `<icon path="assets/paddle.png"/>` to the xml file (with the assets path configured to be assets of course), but this did not work and instead just has the default icon still in the compiled html with `<link rel="shortcut icon" type="image/png" href="./favicon.png">` instead of my intended icon.
-
-I'm using the build command `openfl build <platform> -release -clean` to build, so possibly this may have something to do with it????  
-Or, I'm just not configuring my `project.xml` correctly.
-
-<br><br>
-
-Next, with the way I set up code up
+With the way I set up code up
 
     stageWidth = Lib.current.stage.stageWidth;
 	stageHeight = Lib.current.stage.stageHeight;
@@ -45,3 +37,4 @@ However, you can also be more efficient by adding the openfl and lime libraries 
     haxelib run openfl setup
 
 This adds everything to path so you can compile and run the game with just `openfl <build command>`.
+
