@@ -13,5 +13,13 @@
 
 	<assets path="Assets" rename="assets" />
 
-	<windows fps="60" autoSize="true" />
+	<!-- Window configuration for responsive resizing -->
+	<window width="800" height="600" fps="60" resizable="true" />
+
+	<!-- Platform-specific settings -->
+	<windows fps="60" />
+	<html5 />
+
+	<!-- Enable stage scaling to fit window -->
+	<window if="html5" allow-shaders="false" require-shaders="false" />
 </project>
