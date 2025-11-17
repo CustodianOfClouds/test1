@@ -19,7 +19,4 @@
 	<!-- Platform-specific settings -->
 	<windows fps="60" />
 	<html5 />
-
-	<!-- Enable stage scaling to fit window -->
-	<window if="html5" allow-shaders="false" require-shaders="false" />
 </project>
